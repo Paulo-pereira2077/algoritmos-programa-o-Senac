@@ -1,3 +1,4 @@
+package exercicioAula5;
 
 public class exercicioClasse {
     

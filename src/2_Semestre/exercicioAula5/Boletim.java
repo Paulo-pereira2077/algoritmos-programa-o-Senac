@@ -1,3 +1,4 @@
+package exercicioAula5;
 public class Boletim {
     public double calculando(double nota1, double nota2, double nota3){
 
