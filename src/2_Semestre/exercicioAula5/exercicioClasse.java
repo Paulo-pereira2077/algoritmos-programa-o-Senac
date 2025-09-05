@@ -7,16 +7,15 @@ public static void main(String[] args) {
     Tela tela = new Tela();
     Calculo calculo = new Calculo();
 
-    // exibe a logo do programa
-   tela.apresentacao();
+    tela.apresentacao();
 
-// recebe as notaas
-double num = tela.pedirNumero("Digite um número: ");
+    int num1 = tela.pedirNumero("Digite um número: ");
+    int num2 = tela.pedirNumero("Digite um número: ");
 
-double resultado = calculo.dobrarNumero(num);
+    int resultado = calculo.somarNumeros(num1, num2);
 
-    tela.exibirSituacao(resultado, num);
+    tela.exibir(num1, num2, resultado);
 
-}
+    }
 
 }
