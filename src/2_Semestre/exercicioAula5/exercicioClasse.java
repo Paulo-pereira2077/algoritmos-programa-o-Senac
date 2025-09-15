@@ -1,23 +1,23 @@
 package exercicioAula5;
 
 public class exercicioClasse {
-    
-public static void main(String[] args) {
 
-    Tela tela = new Tela();
-    Calculo calculo = new Calculo();
-    Numero numero = new Numero();
+    public static void main(String[] args) {
 
-    // exibe a logo do programa
-   tela.apresentacao();
+        Tela tela = new Tela();
+        Calculo calculo = new Calculo();
+        Numero numero = new Numero();
 
-    // recebe as notaas
-    numero.num = tela.pedirNumero("Digite um número: ");
+        // exibe a logo do programa
+        tela.apresentacao();
 
-    double resultado = calculo.dobrarNumero(numero.num);
+        // recebe as notaas
+        numero.num = tela.pedirNumero("Digite um número: ");
 
-    tela.exibirSituacao(resultado, numero.num);
+        double resultado = calculo.dobrarNumero(numero.num);
 
-}
+        tela.exibirSituacao(resultado, numero.num);
+
+    }
 
 }

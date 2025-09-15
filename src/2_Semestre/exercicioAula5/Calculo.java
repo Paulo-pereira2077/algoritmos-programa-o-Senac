@@ -1,9 +1,9 @@
 package exercicioAula5;
 
-public class Calculo{
-    
-    public double dobrarNumero(double num){
+public class Calculo {
 
-       return num * 2;
+    public double dobrarNumero(double num) {
+
+        return num * 2;
     }
 }
