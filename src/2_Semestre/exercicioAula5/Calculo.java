@@ -2,8 +2,8 @@ package exercicioAula5;
 
 public class Calculo{
     
-    public int somarNumeros(int num1, int num2){
+    public double dobrarNumero(double num){
 
-        return num1 + num2;
+       return num * 2;
     }
 }
