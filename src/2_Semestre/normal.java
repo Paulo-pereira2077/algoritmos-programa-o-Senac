@@ -4,32 +4,18 @@ public class normal {
     
     static Scanner entrada = new Scanner(System.in);
     public static void main(String[] args) {
-        
-        int quantidade;
-        String tipoIngresso;
-        double valorIngresso = 28.5;
 
-        System.out.println("==== Cinema ====");
-        System.out.println();// pula uma linha
+        System.out.println("Exercicio 1 - Dobrar Número");
 
-        System.out.println("Digite a quantidade de ingressos: ");
-        quantidade = entrada.nextInt();
+        int num;
 
-        System.out.println("Digite o tipo do ingrsso (Inteira ou meia): ");
-        tipoIngresso = entrada.next();
+        System.out.println("Digite um número: ");
+        num = entrada.nextInt();
 
-        double valor;
-        if (tipoIngresso.equalsIgnoreCase("Inteira")){            
-            valor = valorIngresso * quantidade;
-            System.out.println("Valor total: " + valor);
-        }
-        else if (tipoIngresso.equalsIgnoreCase("Meia")){
-            valor = (valorIngresso / 2) * quantidade;
-            System.out.println("Valor total: " + valor);
-        }
-        else {
-            System.out.println("Esse tipo não existente");
-        }
+        double calculo;
+        calculo = num * 2;
+
+        System.out.printf("O dobro de %d é %.2f%n", num, calculo);
 
         entrada.close();
     }
