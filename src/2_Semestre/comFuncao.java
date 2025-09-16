@@ -5,30 +5,33 @@ public class comFuncao {
     static Scanner entrada = new Scanner(System.in);
     public static void main(String[] args) {
 
-        System.out.println("Exercicio 1 - Dobrar Número");
+        System.out.println("Exercicio 3 - Calcular Média");
 
-        int num = pedirNum("Digite um número");
-        double calculo = calculo(num);
-
-        exibir(num, calculo);    
+        double nota1 = pedirNotas("Digite sua nota: ");
+        double nota2 = pedirNotas("Digite sua nota: ");
+        double nota3 = pedirNotas("Digite sua nota: ");
+        
+        double media =calcularMedia(nota1, nota2, nota3);
+        
+        exibirSituacao(media);
 
         entrada.close();
     }
 
-    public static int pedirNum(String msg){
+    public static double pedirNotas(String msg){
 
-        System.out.println(msg);
-        return entrada.nextInt();
+        System.out.print(msg);
+        return entrada.nextDouble();
     }
 
-    public static double calculo(int num){
-
-        return num * 2;
+    public static double calcularMedia(double nota1, double nota2, double nota3){
+        
+        return (nota1 + nota2 + nota3) / 3;
     }
 
-    public static void exibir (int num, double calculo){
+    public static void exibirSituacao(double media){
 
-        System.out.printf("O dobro de %d é %.2f%n", num, calculo);
-    
+        System.out.printf("A média é %.1f%n", media);
     }
+
 }

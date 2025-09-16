@@ -1,4 +1,4 @@
-package exercicioAula5;
+package exercicioAula;
 
 import java.util.Scanner;
 
@@ -6,7 +6,7 @@ public class Tela {
     Scanner entrada = new Scanner(System.in);
 
     public void apresentacao() {
-        System.out.println("------ Exercício 1 (Calculando o dobro de um número) ------");
+        System.out.println("------ Exercicio 3 - Calcular Média ------");
         System.out.println();
     }
 
@@ -16,9 +16,9 @@ public class Tela {
         return entrada.nextDouble();
     }
 
-    public void exibirSituacao(double resultado, double num) {
+    public void exibirSituacao(double resultado) {
 
-        System.out.printf("o dobro de %.2f é: %.2f\n", num, resultado);
+        System.out.printf("A média é %.1f%n", resultado);    
     }
 
 }
