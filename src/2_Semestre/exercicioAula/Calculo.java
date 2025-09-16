@@ -2,8 +2,24 @@ package exercicioAula;
 
 public class Calculo {
 
-    public static double calcular(double nota1, double nota2, double nota3){
 
-        return (nota1 + nota2 + nota3) / 3;
+    public double totalP(double p){
+
+        return p * 13.50;        
+    }
+
+    public double totalM(double m){
+
+        return m * 15.0;        
+    }
+
+    public double totalG(double g){
+
+        return g * 17.50;        
+    }
+
+    public double totalAPagar(double resultadoP, double resultadoM, double resultadoG){
+
+        return resultadoP + resultadoM + resultadoG;
     }
 }

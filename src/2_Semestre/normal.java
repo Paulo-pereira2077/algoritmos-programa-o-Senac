@@ -5,21 +5,44 @@ public class normal {
     static Scanner entrada = new Scanner(System.in);
     public static void main(String[] args) {
 
-        System.out.println("Exercicio 3 - Calcular Média");
+        System.out.println("Exercicio 5 - Dia da semana");       
+                      
+       System.out.println("Digite um número de 0 a 6 para saber o dia da semana");
+       int num = entrada.nextInt();
 
-        double nota1;
-        double nota2;
-        double nota3;
+       switch(num){
+        case 0:
+            System.out.println("Domingo");
+        break;
 
-        System.out.println("Digite suas notas: ");
-        nota1 = entrada.nextDouble(); 
-        nota2 = entrada.nextDouble(); 
-        nota3 = entrada.nextDouble(); 
+        case 1:
+            System.out.println("Segunda-feira");
+        break;
+        
+        case 2:
+            System.out.println("Terça-feira");
+        break;
+        
+        case 3:
+            System.out.println("Quarta-feira");
+        break;
+        
+        case 4:
+            System.out.println("Quinta-feira");
+        break;
+        
+        case 5:
+            System.out.println("Sexta-feira");
+        break;
+        
+        case 6:
+            System.out.println("Sábado");
+        break;
 
-        double media;
-        media = (nota1 + nota2 + nota3) / 3;
-
-        System.out.printf("A média é %.1f%n", media);
+        default:
+            System.out.println("Dia da semana inválido");
+        
+       }
 
         entrada.close();
     }

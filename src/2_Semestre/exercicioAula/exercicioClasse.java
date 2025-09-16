@@ -5,19 +5,12 @@ public class exercicioClasse {
     public static void main(String[] args) {
 
         Tela tela = new Tela();
-        Calculo calculo = new Calculo();
-        Nota nota = new Nota();
+        Dia dia = new Dia();
 
         tela.apresentacao();
-
-       nota.nota1 = tela.pedirNumero("Digite sua nota: ");
-       nota.nota2 = tela.pedirNumero("Digite sua nota: ");
-       nota.nota3 = tela.pedirNumero("Digite sua nota: ");
-
-        double resultado = calculo.calcular(nota.nota1,nota.nota2, nota.nota3);
-
-        tela.exibirSituacao(resultado);
-
+                      
+       dia.num = tela.pedirDia("Digite um número de 0 a 6 para saber o dia da semana");
+       tela.diaSemana(dia.num);
     }
-
-} 
+    
+}
