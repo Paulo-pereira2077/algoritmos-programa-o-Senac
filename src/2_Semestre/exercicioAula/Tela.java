@@ -6,47 +6,25 @@ public class Tela {
     Scanner entrada = new Scanner(System.in);
 
     public void apresentacao() {
-        System.out.println("Exercicio 5 - Dia da semana"); 
-    }                   
-     
-    public int pedirDia(String msg){
+        System.out.println("Açaiteria");
+    }
+
+    public int pedirAcai(String msg) {
 
         System.out.println(msg);
         return entrada.nextInt();
     }
 
-    public void diaSemana(int num){
-        switch(num){
-        case 0:
-            System.out.println("Domingo");
-        break;
-
-        case 1:
-            System.out.println("Segunda-feira");
-        break;
+    public void exibirQuantidadeAcai(Acaiteria acai) {
         
-        case 2:
-            System.out.println("Terça-feira");
-        break;
-        
-        case 3:
-            System.out.println("Quarta-feira");
-        break;
-        
-        case 4:
-            System.out.println("Quinta-feira");
-        break;
-        
-        case 5:
-            System.out.println("Sexta-feira");
-        break;
-        
-        case 6:
-            System.out.println("Sábado");
-        break;
-
-        default:
-            System.out.println("Dia da semana inválido");
+        System.out.println("Seu pedido foi registrado.");
+        System.out.println();
+        System.out.println("Açaí P: " + acai.qtdP);
+        System.out.println("Açaí M: " + acai.qtdM);
+        System.out.println("Açaí G: " + acai.qtdG);
     }
-  }
+
+    public void descontoAplicado(Acaiteria acai) {
+        System.out.printf("Desconto de %d%% aplicado.%n", acai.desconto); // corrigido o símbolo de porcentagem
+    }
 }
