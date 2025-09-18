@@ -2,24 +2,30 @@ package exercicioAula;
 
 public class Calculo {
 
+    public double verificarSituacao(int qtdIngresso, String tipoIngresso){
 
-    public double totalP(double p){
+        if (tipoIngresso.equalsIgnoreCase("Meia")){
 
-        return p * 13.50;        
+            return calcularMeia(qtdIngresso);
+        }
+        else if (tipoIngresso.equalsIgnoreCase("Inteira")){
+            return calcularInteira(qtdIngresso);
+        }
+        else{
+            System.out.println("Tipo de ingresso inválido!");
+            return 0.0;
+        }
     }
 
-    public double totalM(double m){
+   public double calcularMeia(int qtdIngresso){
 
-        return m * 15.0;        
+        double calculoM = qtdIngresso * 14.25;
+        return calculoM;
     }
 
-    public double totalG(double g){
+    public double calcularInteira(int qtdIngresso){
 
-        return g * 17.50;        
-    }
-
-    public double totalAPagar(double resultadoP, double resultadoM, double resultadoG){
-
-        return resultadoP + resultadoM + resultadoG;
+        double calculoI = qtdIngresso * 28.5;
+        return calculoI;
     }
 }

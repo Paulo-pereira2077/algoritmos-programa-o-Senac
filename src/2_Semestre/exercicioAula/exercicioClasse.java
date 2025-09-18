@@ -2,14 +2,18 @@ package exercicioAula;
 
 public class exercicioClasse {
     public static void main(String[] args) {
+       
         Tela tela = new Tela();
-        Dia diaSemana = new Dia();
+        Calculo calculo = new Calculo();
 
         tela.apresentacao();
 
-        diaSemana.num = tela.pedirDia("Digite um número de 0 a 6: ");
-        diaSemana.lerDia();        
+        String tipoIngresso = tela.pedirIngresso("Digite o tipo do ingresso (Meia ou inteira): ");
+        int qtdIngresso = tela.pedirQtd("Digite a quantidade de ingressos: ");
 
-        tela.exibirDia(diaSemana.dia);
+       double total = calculo.verificarSituacao(qtdIngresso, tipoIngresso);
+
+        tela.exibirResultado(total);
+
     }
 }

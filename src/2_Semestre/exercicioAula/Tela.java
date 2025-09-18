@@ -6,15 +6,26 @@ public class Tela {
     Scanner entrada = new Scanner(System.in);
 
     public void apresentacao() {
-        System.out.println("=== Exercicio 5 - Dia da Semana ===");
+        System.out.println("=== Exercicio 6 - Ingresso de Cinema ===");
     }
 
-    public int pedirDia(String msg) {
-        System.out.print(msg);
+    public String pedirIngresso(String msg){
+
+        System.out.println(msg);
+        return entrada.next();
+    }
+
+    public int pedirQtd(String msg){
+
+        System.out.println(msg);
         return entrada.nextInt();
     }
+    
 
-    public void exibirDia(String dia) {
-        System.out.println(dia);
+    public void exibirResultado(double total){
+
+        System.out.printf("O total a pagar é R$%.2f%n", total);
     }
+
+
 }
