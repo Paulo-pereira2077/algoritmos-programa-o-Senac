@@ -1,6 +1,6 @@
 package exercicioAula;
 
-public class Ingresso {
+public class Nota {
     
 
 }

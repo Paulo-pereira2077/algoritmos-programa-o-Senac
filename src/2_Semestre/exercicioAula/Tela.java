@@ -6,26 +6,37 @@ public class Tela {
     Scanner entrada = new Scanner(System.in);
 
     public void apresentacao() {
-        System.out.println("=== Exercicio 6 - Ingresso de Cinema ===");
+        System.out.println("=== Exercicio 7 - Média aluno ===");
     }
 
-    public String pedirIngresso(String msg){
+    public double pedirNotas(String msg){
 
         System.out.println(msg);
-        return entrada.next();
+        return entrada.nextDouble();
     }
 
-    public int pedirQtd(String msg){
-
-        System.out.println(msg);
-        return entrada.nextInt();
+    public void exibirMedia(double calculo){
+        
+        System.out.printf("A média do aluno é %.2f%n", calculo);
     }
     
+    public void verificarSituacao(double media){
 
-    public void exibirResultado(double total){
-
-        System.out.printf("O total a pagar é R$%.2f%n", total);
+        if (media >= 8) {
+            System.out.println("Situação: Aprovado com sucesso");
+        }
+        else if (media >= 6 && media < 8) {
+            System.out.println("Situação: Aprovado");
+        }
+        else if (media >= 3 && media < 6) {
+            System.out.println("Situação: Recuperação");
+        }
+        else if (media < 3) {
+            System.out.println("Situação: Reprovado");
+        }
+        else{
+            System.out.println("Situação: Desistente");
+        }
     }
-
 
 }

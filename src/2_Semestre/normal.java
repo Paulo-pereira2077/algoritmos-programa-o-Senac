@@ -5,33 +5,38 @@ public class normal {
     static Scanner entrada = new Scanner(System.in);
     public static void main(String[] args) {
 
-        System.out.println("Exercicio 6 - Ingresso de Cinema");       
+        System.out.println("Exercicio 7 - Média do aluno");       
                       
-       int qtdIngresso;
-       String tipoIngresso;
+        double nota1;
+        double nota2;
+        double nota3;
 
-       System.out.println("Bem-vindo ao cinema");
-       System.out.print("Digite o tipo do ingresso (Meia ou inteira): ");
-       tipoIngresso = entrada.next();
+        System.out.println("Digite as suas notas: ");
+        nota1 = entrada.nextDouble();
+        nota2 = entrada.nextDouble();
+        nota3 = entrada.nextDouble();
 
-       System.out.println("Digite a quantidade de ingressos: ");
-        qtdIngresso = entrada.nextInt();
+        double media;
+        media = (nota1 + nota2 + nota3) / 3;
 
-        double valor=0;
-
-        if (tipoIngresso.equalsIgnoreCase("Meia")){
-
-            valor = qtdIngresso * 14.25;
+        System.out.printf("A média do aluno é %.2f%n", media);
+        
+        if (media >= 8) {
+            System.out.println("Situação: Aprovado com sucesso");
         }
-        else if (tipoIngresso.equalsIgnoreCase("Inteira")){
-            valor = qtdIngresso * 28.5;
+        else if (media >= 6 && media < 8) {
+            System.out.println("Situação: Aprovado");
+        }
+        else if (media >= 3 && media < 6) {
+            System.out.println("Situação: Recuperação");
+        }
+        else if (media < 3) {
+            System.out.println("Situação: Reprovado");
         }
         else{
-            System.out.println("Tipo de ingresso inválido!");
-        }
-
-        System.out.printf("O total a pagar é R$%.2f%n", valor);
-
+            System.out.println("Situação: Desistente");
+        }       
+       
         entrada.close();
     }
 }
