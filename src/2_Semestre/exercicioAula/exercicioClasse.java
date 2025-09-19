@@ -8,10 +8,10 @@ public class exercicioClasse {
 
         tela.apresentacao();
 
-        String tipoIngresso = tela.pedirIngresso("Digite o tipo do ingresso (Meia ou inteira): ");
-        int qtdIngresso = tela.pedirQtd("Digite a quantidade de ingressos: ");
+         calculo.tipoIngresso = tela.pedirIngresso("Digite o tipo do ingresso (Meia ou inteira): ");
+         calculo.qtdIngresso = tela.pedirQtd("Digite a quantidade de ingressos: ");
 
-       double total = calculo.verificarSituacao(qtdIngresso, tipoIngresso);
+       double total = calculo.verificarSituacao(calculo.qtdIngresso, calculo.tipoIngresso);
 
         tela.exibirResultado(total);
 

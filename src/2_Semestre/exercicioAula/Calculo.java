@@ -2,13 +2,19 @@ package exercicioAula;
 
 public class Calculo {
 
+    public int qtdIngresso;
+    public String tipoIngresso;
+
     public double verificarSituacao(int qtdIngresso, String tipoIngresso){
 
-        if (tipoIngresso.equalsIgnoreCase("Meia")){
+        this.qtdIngresso = qtdIngresso;
+        this.tipoIngresso = tipoIngresso;
+
+        if (this.tipoIngresso.equalsIgnoreCase("Meia")){
 
             return calcularMeia(qtdIngresso);
         }
-        else if (tipoIngresso.equalsIgnoreCase("Inteira")){
+        else if (this.tipoIngresso.equalsIgnoreCase("Inteira")){
             return calcularInteira(qtdIngresso);
         }
         else{
@@ -17,13 +23,13 @@ public class Calculo {
         }
     }
 
-   public double calcularMeia(int qtdIngresso){
+   private double calcularMeia(int qtdIngresso){
 
         double calculoM = qtdIngresso * 14.25;
         return calculoM;
     }
 
-    public double calcularInteira(int qtdIngresso){
+    private double calcularInteira(int qtdIngresso){
 
         double calculoI = qtdIngresso * 28.5;
         return calculoI;
