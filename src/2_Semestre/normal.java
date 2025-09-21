@@ -5,38 +5,46 @@ public class normal {
     static Scanner entrada = new Scanner(System.in);
     public static void main(String[] args) {
 
-        System.out.println("Exercicio 7 - Média do aluno");       
-                      
-        double nota1;
-        double nota2;
-        double nota3;
+        System.out.println("Exercicio 8 - Informando a cor resultante");       
 
-        System.out.println("Digite as suas notas: ");
-        nota1 = entrada.nextDouble();
-        nota2 = entrada.nextDouble();
-        nota3 = entrada.nextDouble();
-
-        double media;
-        media = (nota1 + nota2 + nota3) / 3;
-
-        System.out.printf("A média do aluno é %.2f%n", media);
+        String cor1;
+        String cor2;
         
-        if (media >= 8) {
-            System.out.println("Situação: Aprovado com sucesso");
+        System.out.println("Para saber a cor resultante apenas digite as cores primárias (vermelho, azul ou amarelo)");
+        System.out.print("Digite a primeira cor: ");
+        cor1 = entrada.next();
+        
+        System.out.print("Digite a segunda cor: ");
+        cor2 = entrada.next();
+
+        boolean corPrimaria1 = cor1.equalsIgnoreCase("Vermelho") ||
+                            cor1.equalsIgnoreCase("Azul") ||
+                            cor1.equalsIgnoreCase("Amarelo");
+
+        boolean corPrimaria2 = cor2.equalsIgnoreCase("Vermelho") ||
+                            cor2.equalsIgnoreCase("Azul") ||
+                            cor2.equalsIgnoreCase("Amarelo");
+
+        String resultado;
+     
+        if (corPrimaria1 && corPrimaria2) {
+ 
+            if (cor1.equalsIgnoreCase(cor2)) {
+                resultado = cor1;
+            } else if ((cor1.equalsIgnoreCase("Vermelho") && cor2.equalsIgnoreCase("Azul")) || (cor1.equalsIgnoreCase("Azul") && cor2.equalsIgnoreCase("Vermelho"))) {
+                resultado = "Roxo";
+            } else if ((cor1.equalsIgnoreCase("Vermelho") && cor2.equalsIgnoreCase("Amarelo")) || (cor1.equalsIgnoreCase("Amarelo") && cor2.equalsIgnoreCase("Vermelho"))) {
+                resultado = "Laranja";
+            } else { 
+                resultado = "Verde";
+            }
+        } else {
+            resultado = "Apenas cores primárias são aceitas";
         }
-        else if (media >= 6 && media < 8) {
-            System.out.println("Situação: Aprovado");
-        }
-        else if (media >= 3 && media < 6) {
-            System.out.println("Situação: Recuperação");
-        }
-        else if (media < 3) {
-            System.out.println("Situação: Reprovado");
-        }
-        else{
-            System.out.println("Situação: Desistente");
-        }       
-       
+ 
+        System.out.println("A combinação das cores é: " + resultado); 
+                            
+
         entrada.close();
     }
 }
