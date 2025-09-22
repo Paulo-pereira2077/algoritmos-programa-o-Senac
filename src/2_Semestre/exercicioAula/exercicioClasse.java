@@ -3,22 +3,18 @@ package exercicioAula;
 public class exercicioClasse {
     public static void main(String[] args) {
 
-        Tela tela = new Tela();
-        Calculo calculo = new Calculo();
-
-
-        tela.apresentacao();                                  
+    Tela tela = new Tela();
+    Calculo calculo = new Calculo();
         
-        calculo.nota1 = tela.pedirNotas("Digite as suas notas: ");
-        calculo.nota2 = tela.pedirNotas("Digite as suas notas: ");
-        calculo.nota3 = tela.pedirNotas("Digite as suas notas: ");
+    tela.apresentacao();
 
-        calculo.lerMedia();
-        
-        tela.exibirMedia(calculo.media);
-        
-        tela.verificarSituacao(calculo.media);
-       
+    calculo.nota1 = tela.pedirNotas("Digite sua nota: ");        
+    calculo.nota2 = tela.pedirNotas("Digite sua nota: ");
+    calculo.nota3 = tela.pedirNotas("Digite sua nota: ");
+
+    double resultado = calculo.lerMedia();
+
+    tela.verificarSituacao(resultado);
+
     }    
 }
-
