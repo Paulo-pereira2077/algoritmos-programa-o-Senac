@@ -4,17 +4,15 @@ public class exercicioClasse {
     public static void main(String[] args) {
 
     Tela tela = new Tela();
-    Calculo calculo = new Calculo();
+    Numero numero = new Numero();
         
     tela.apresentacao();
 
-    calculo.nota1 = tela.pedirNotas("Digite sua nota: ");        
-    calculo.nota2 = tela.pedirNotas("Digite sua nota: ");
-    calculo.nota3 = tela.pedirNotas("Digite sua nota: ");
+    System.out.println("Digite dois números: ");
+        numero.num1 = tela.pedirNumeros();
+        numero.num2 = tela.pedirNumeros();
 
-    double resultado = calculo.lerMedia();
-
-    tela.verificarSituacao(resultado);
+    numero.lerContagem();
 
     }    
 }
