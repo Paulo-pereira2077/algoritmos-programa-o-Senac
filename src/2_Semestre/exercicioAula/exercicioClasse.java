@@ -5,20 +5,16 @@ public class exercicioClasse {
 
         Tela tela = new Tela();
         Calculo calculo = new Calculo();
-
+        
         tela.apresentacao();
 
-        calculo.qtdP = tela.pedirNumeros("Digite a quantidade de P: ");
-        calculo.qtdM = tela.pedirNumeros("Digite a quantidade de M: ");
-        calculo.qtdG = tela.pedirNumeros("Digite a quantidade de G: ");
-        calculo.desconto = tela.pedirNumeros("Digite o valor do cupom de desconto: "); 
+        calculo.nota1 = tela.pedirNotas("Digite sua preimeira nota:");
+        calculo.nota2 = tela.pedirNotas("Digite sua segunda nota:");
+        calculo.nota3 = tela.pedirNotas("Digite sua terceira nota:");
 
-        tela.exibirPedido(calculo);
-        tela.exibirDesconto(calculo);
+        calculo.rodarBoletim();
 
-        calculo.lerDesconto();
-        calculo.totalPagar();
+        tela.exibirResultado(calculo.lerMedia(), calculo.lerSituacao());
 
-        tela.exibirResultado(calculo);
     }    
 }

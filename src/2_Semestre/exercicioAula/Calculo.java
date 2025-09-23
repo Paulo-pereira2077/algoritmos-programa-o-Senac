@@ -2,32 +2,56 @@ package exercicioAula;
 
 public class Calculo {
 
-  public int qtdP;
-  public int qtdM;
-  public int qtdG;
-  public double desconto;
-  public double total;
+    public double nota1;
+    public double nota2;
+    public double nota3;
 
-  public double totalPagar(){
+    public double media;
+    public String situacao;
 
-    return this.total = calcularTotal(qtdP, qtdM, qtdG);
-  }
+    public void rodarBoletim(){
+      this.media = calcularMedia();
+      this.situacao = verificarSituacao();
+    }
 
-  public double lerDesconto(){
+    public double lerMedia(){
 
-    return this.desconto = verificarDesconto();
-  }
+      return this.media;
+    }
 
-  private double verificarDesconto(){
+    public String lerSituacao(){
 
-    return desconto / 100;
-  }
+      return this.situacao;
+    }
 
-  private double calcularTotal(int qtdP, int qtdM, int qtdG){
 
-    double preco = (qtdP * 13.50) + (qtdM * 15) + (qtdG * 17.50);
-    double desc = this.desconto * preco;         
-    return preco - desc;    
-  }
+    private double calcularMedia(){
+
+      double calculoM = (this.nota1 + this.nota2 + this.nota3) / 3;
+      return calculoM;
+    }
+
+    private String verificarSituacao(){
+
+      String sit = "";
+
+        if (this.media >= 8){
+          sit = "Aprovado com Sucesso";
+        }
+        else if (this.media >= 6 && media <= 8){
+          sit = "Aprovado";
+        }
+        else if (this.media >= 3 && media <= 6){
+          sit = "Recuperação";
+        }
+        else if (this.media == 0){
+          sit = "Desistente";
+        }
+        else {
+          sit = "Reprovado";
+        }
+
+        return sit;
+    }
 
 }
