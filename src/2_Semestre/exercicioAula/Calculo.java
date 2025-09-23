@@ -2,19 +2,32 @@ package exercicioAula;
 
 public class Calculo {
 
-       public double nota1;
-       public double nota2;
-       public double nota3;   
+  public int qtdP;
+  public int qtdM;
+  public int qtdG;
+  public double desconto;
+  public double total;
 
-       public double media;
+  public double totalPagar(){
 
-       public double lerMedia(){
-         this.media = calcularMedia(nota1, nota2, nota3);
-         return media;
-       }
-       
-       private double calcularMedia(double nota1, double nota2, double nota3){
- 
-        return (nota1 + nota2 + nota3) / 3;       
-    }
+    return this.total = calcularTotal(qtdP, qtdM, qtdG);
+  }
+
+  public double lerDesconto(){
+
+    return this.desconto = verificarDesconto();
+  }
+
+  private double verificarDesconto(){
+
+    return desconto / 100;
+  }
+
+  private double calcularTotal(int qtdP, int qtdM, int qtdG){
+
+    double preco = (qtdP * 13.50) + (qtdM * 15) + (qtdG * 17.50);
+    double desc = this.desconto * preco;         
+    return preco - desc;    
+  }
+
 }

@@ -3,16 +3,22 @@ package exercicioAula;
 public class exercicioClasse {
     public static void main(String[] args) {
 
-    Tela tela = new Tela();
-    Numero numero = new Numero();
-        
-    tela.apresentacao();
+        Tela tela = new Tela();
+        Calculo calculo = new Calculo();
 
-    System.out.println("Digite dois números: ");
-        numero.num1 = tela.pedirNumeros();
-        numero.num2 = tela.pedirNumeros();
+        tela.apresentacao();
 
-    numero.lerContagem();
+        calculo.qtdP = tela.pedirNumeros("Digite a quantidade de P: ");
+        calculo.qtdM = tela.pedirNumeros("Digite a quantidade de M: ");
+        calculo.qtdG = tela.pedirNumeros("Digite a quantidade de G: ");
+        calculo.desconto = tela.pedirNumeros("Digite o valor do cupom de desconto: "); 
 
+        tela.exibirPedido(calculo);
+        tela.exibirDesconto(calculo);
+
+        calculo.lerDesconto();
+        calculo.totalPagar();
+
+        tela.exibirResultado(calculo);
     }    
 }
