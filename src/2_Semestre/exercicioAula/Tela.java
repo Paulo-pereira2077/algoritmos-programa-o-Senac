@@ -6,19 +6,18 @@ public class Tela {
     Scanner entrada = new Scanner(System.in);
 
     public void apresentacao() {
-        System.out.println("=== Média aluno ===");    
+        System.out.println("=== Calculando soma de um número de forma progressiva ===");    
     }
 
-    public double pedirNotas(String msg){
+    public int pedirNumero(String msg){
 
         System.out.println(msg);
-        return entrada.nextDouble();
+        return entrada.nextInt();
     }
 
-    public void exibirResultado(double media, String situacao){
+    public void exibirResultado(int num, int resultado){
 
-        System.out.printf("\nA média do aluno é %.2f%n", media);
-        System.out.println("Situação: " + situacao);
-    } 
+        System.out.printf("A soma dos números de 1 á %d é %d%n", num, resultado);
+    }
     
 }
