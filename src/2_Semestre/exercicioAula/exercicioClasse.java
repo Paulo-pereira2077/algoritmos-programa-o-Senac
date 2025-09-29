@@ -9,9 +9,9 @@ public class exercicioClasse {
         tela.apresentacao();
 
         numero.num = tela.pedirNumero("Digite um número");
+        
+        numero.lerResultado();
 
-        int resultado = numero.calcularNumero(numero.num);
-
-        tela.exibirResultado(numero.num, resultado);
+        tela.exibirResultado(numero.num, numero.resultado);
     }    
 }

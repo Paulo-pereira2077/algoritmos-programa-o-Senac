@@ -15,9 +15,9 @@ public class Tela {
         return entrada.nextInt();
     }
 
-    public void exibirResultado(int num, int resultado){
+    public void exibirResultado(int num, int numSomado){
 
-        System.out.printf("A soma dos números de 1 á %d é %d%n", num, resultado);
+        System.out.printf("A soma dos números de 1 á %d é %d%n", num, numSomado);
     }
     
 }

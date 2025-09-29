@@ -3,11 +3,18 @@ package exercicioAula;
 public class Numero {
  
     public int num;
+
+    public int resultado;
+
+    public int lerResultado(){
+        this.resultado = calcularNumero(num);
+        return resultado;
+    }
     
-     public int calcularNumero(int num){
+     private int calcularNumero(int num){
         int numSomado = 0;
 
-        for (int i = 1; i <= num; i++){
+        for (int i = 1; i <= this.num; i++){
             numSomado += i;
         }
         return numSomado;
