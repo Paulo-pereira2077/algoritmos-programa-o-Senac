@@ -8,7 +8,7 @@ public class exercicioClasse {
         
         tela.apresentacao();
 
-        calculo.nota1 = tela.pedirNotas("Digite sua preimeira nota:");
+        calculo.nota1 = tela.pedirNotas("Digite sua primeira nota:");
         calculo.nota2 = tela.pedirNotas("Digite sua segunda nota:");
         calculo.nota3 = tela.pedirNotas("Digite sua terceira nota:");
 
