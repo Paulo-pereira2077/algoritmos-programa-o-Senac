@@ -9,15 +9,10 @@ public class Tela {
         System.out.println("=== Calculando soma de um número de forma progressiva ===");    
     }
 
-    public int pedirNumero(String msg){
+    public int pedirNum(String msg){
 
-        System.out.println(msg);
+        System.out.print(msg);
         return entrada.nextInt();
-    }
-
-    public void exibirResultado(int num, int numSomado){
-
-        System.out.printf("A soma dos números de 1 á %d é %d%n", num, numSomado);
     }
     
 }

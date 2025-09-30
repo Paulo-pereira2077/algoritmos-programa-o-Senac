@@ -8,10 +8,10 @@ public class exercicioClasse {
 
         tela.apresentacao();
 
-        numero.num = tela.pedirNumero("Digite um número");
-        
-        numero.lerResultado();
+        numero.num = tela.pedirNum("Digite um número: ");
 
-        tela.exibirResultado(numero.num, numero.resultado);
+        numero.lerFormato();
+        System.out.println(numero.resultado);
+
     }    
 }

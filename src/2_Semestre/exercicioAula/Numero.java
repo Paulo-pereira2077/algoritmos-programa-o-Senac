@@ -3,20 +3,25 @@ package exercicioAula;
 public class Numero {
  
     public int num;
-
-    public int resultado;
-
-    public int lerResultado(){
-        this.resultado = calcularNumero(num);
+    public String resultado;
+    
+    public String lerFormato(){
+        this.resultado = formato();
         return resultado;
     }
-    
-     private int calcularNumero(int num){
-        int numSomado = 0;
 
-        for (int i = 1; i <= this.num; i++){
-            numSomado += i;
+
+private String formato() {
+    String forma = "";
+
+    for (int y = 0; y < this.num; y++) {
+        for (int x = 0; x < this.num; x++) {
+            forma += "*";
         }
-        return numSomado;
-    } 
+        forma += "\n";
+    }
+
+    return forma;
+}
+     
 }
