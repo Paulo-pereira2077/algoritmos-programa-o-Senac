@@ -1,4 +1,5 @@
+package exercicio2;
 
-public class tela {
+public class Tela {
     
 }

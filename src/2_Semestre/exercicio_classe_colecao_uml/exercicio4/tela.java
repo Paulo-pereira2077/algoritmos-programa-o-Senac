@@ -1,4 +1,3 @@
-
-public class tela {
+public class Tela {
     
 }
