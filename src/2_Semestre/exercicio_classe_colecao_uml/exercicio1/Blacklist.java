@@ -2,15 +2,10 @@ import java.util.ArrayList;
 
 public class Blacklist {
 
-    // 1. O ArrayList deve ser privado
     private ArrayList<String> pessoas = new ArrayList<>();
 
-    // O Scanner DEVE ser criado e usado APENAS na classe App, ou como parâmetro.
-    // Variáveis de controle (opcao, i, pessoa, etc.) não devem estar aqui.
 
-    // Bloco de inicialização (Construtor implícito ou explícito)
     public Blacklist() {
-        // 2. Adiciona dados iniciais de forma correta (dentro do construtor)
         this.pessoas.add("João");
         this.pessoas.add("Maria");
     }
