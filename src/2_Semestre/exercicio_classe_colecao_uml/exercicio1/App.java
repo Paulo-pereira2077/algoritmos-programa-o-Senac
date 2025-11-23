@@ -1,56 +1,27 @@
 import java.util.Scanner;
 
 public class App {
+    
+    static Scanner entrada = new Scanner(System.in);
     public static void main(String[] args) {
+        
+        System.out.print("Digite o valor do pedido: ");
+        double valor = entrada.nextDouble();
 
-        Scanner sc = new Scanner(System.in);
-        Blacklist blacklist = new Blacklist();
-        int opcao = 0;
+        System.out.print("Digite a quantidade de parcelas: ");
+        int parcelas = entrada.nextInt();
+        entrada.nextLine();
 
-        do {
-            Menu.exibirMenu();
-            System.out.print("Escolha uma opção: ");
-            opcao = sc.nextInt();
-            sc.nextLine(); 
+        System.out.print("Digite o código do cupom: ");
+        String cupom = entrada.nextLine();
 
-            switch (opcao) {
-                case 1:
-                    System.out.print("Digite o nome para adicionar: ");
-                    String nomeAdd = sc.nextLine();
-                    blacklist.adicionar(nomeAdd);
-                    break;
+        Pedido pedido = new Pedido(valor, parcelas, cupom);
+        Response resposta = pedido.calcularTotal();
 
-                case 2:
-                    System.out.print("Digite a posição que deseja alterar: ");
-                    int posAlterar = sc.nextInt();
-                    sc.nextLine();
-
-                    System.out.print("Digite o novo nome: ");
-                    String novoNome = sc.nextLine();
-
-                    blacklist.alterar(posAlterar, novoNome);
-                    break;
-
-                case 3:
-                    blacklist.listar();
-                    break;
-
-                case 4:
-                    System.out.print("Digite a posição para remover: ");
-                    int posRemover = sc.nextInt();
-                    blacklist.remover(posRemover);
-                    break;
-
-                case 5:
-                    System.out.println("Encerrando...");
-                    break;
-
-                default:
-                    System.out.println("Opção inválida!");
-            }
-
-        } while (opcao != 5);
-
-        sc.close();
+        System.out.println("\n===== RESULTADO DO PEDIDO =====");
+        System.out.println("Valor final do pedido: R$ " + resposta.lerValorTotal());
+        System.out.println("Valor da parcela: R$ " + resposta.lerValorParcela());
+        System.out.println("Total de parcelas: " + resposta.lerParcelas());
+        System.out.println("Desconto aplicado: R$ " + resposta.lerValorCupom());
     }
 }
