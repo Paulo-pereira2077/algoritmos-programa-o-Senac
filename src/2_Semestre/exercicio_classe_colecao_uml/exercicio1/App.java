@@ -4,47 +4,48 @@ public class App {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
-        ControleReservas controle = new ControleReservas();
+        ListaReproducao playlist = new ListaReproducao();
 
         int opcao;
 
         do {
             System.out.println("===== MENU =====");
-            System.out.println("1. Nova reserva");
-            System.out.println("2. Listar reservas");
-            System.out.println("3. Chamar próximo");
+            System.out.println("1. Adicionar música");
+            System.out.println("2. Listar músicas");
+            System.out.println("3. Tocar próxima");
             System.out.println("0. Sair");
             System.out.println("================");
 
-            System.out.print("Escolha uma opção: ");
+            System.out.print("Escolha: ");
             opcao = sc.nextInt();
             sc.nextLine();
 
             switch (opcao) {
 
                 case 1:
-                    System.out.print("Nome do responsável: ");
-                    String resp = sc.nextLine();
+                    System.out.print("Nome da música: ");
+                    String nome = sc.nextLine();
 
-                    System.out.print("Quantidade de lugares: ");
-                    int lugares = sc.nextInt();
+                    System.out.print("Artista: ");
+                    String artista = sc.nextLine();
 
-                    controle.novaReserva(resp, lugares);
+                    System.out.print("Código do YouTube (apenas após o v=): ");
+                    String codigo = sc.nextLine();
+
+                    Musica m = new Musica(nome, artista, codigo);
+                    playlist.adicionar(m);
                     break;
 
                 case 2:
-                    controle.listar();
+                    playlist.listar();
                     break;
 
                 case 3:
-                    Reserva r = controle.proximo();
-                    if (r != null) {
-                        System.out.println("Chamando: " + r.getResponsavel() + " - " + r.getLugares() + " lugares");
-                    }
+                    playlist.tocarProxima();
                     break;
 
                 case 0:
-                    System.out.println("Encerrando...");
+                    System.out.println("Saindo...");
                     break;
 
                 default:
