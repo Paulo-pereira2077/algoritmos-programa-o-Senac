@@ -1,27 +1,29 @@
 import java.util.Scanner;
 
 public class App {
-    
+
     static Scanner entrada = new Scanner(System.in);
+
     public static void main(String[] args) {
-        
-        System.out.print("Digite o valor do pedido: ");
-        double valor = entrada.nextDouble();
 
-        System.out.print("Digite a quantidade de parcelas: ");
-        int parcelas = entrada.nextInt();
-        entrada.nextLine();
+        System.out.print("\nDigite o código do curso\nTSI (Sistemas para Internet),\nTADS (Análise e Desenvolvimento de Sistemas),\nBCC (Ciência da Computação),\nBSI (Sistemas de Informação),\nBEC (Engenharia da Computação) \nDigite aqui: ");
+        String codCurso = entrada.nextLine();
 
-        System.out.print("Digite o código do cupom: ");
-        String cupom = entrada.nextLine();
+        System.out.println();
+        System.out.print("Digite o código da bolsa\nMON (Monitoria),\nEMP (Ensino Médio Público),\nISE (Isenção),\nEXT (Projeto de Extensão),\nPES (Pesquisa Científica)\nOu deixe vazio: ");
+        String codBolsa = entrada.nextLine();
 
-        Pedido pedido = new Pedido(valor, parcelas, cupom);
-        Response resposta = pedido.calcularTotal();
+        Opcoes op = new Opcoes(codCurso, codBolsa);
+        Universidade uni = new Universidade();
 
-        System.out.println("\n===== RESULTADO DO PEDIDO =====");
-        System.out.println("Valor final do pedido: R$ " + resposta.lerValorTotal());
-        System.out.println("Valor da parcela: R$ " + resposta.lerValorParcela());
-        System.out.println("Total de parcelas: " + resposta.lerParcelas());
-        System.out.println("Desconto aplicado: R$ " + resposta.lerValorCupom());
+        Resultado res = uni.calcularMensalidade(op);
+
+        if (res == null) return;
+
+        System.out.println("\n===== RESULTADO =====");
+        System.out.println("Curso: " + res.lerCurso());
+        System.out.println("Bolsa: " + res.lerBolsa());
+        System.out.println("Desconto: R$ " + res.lerDesconto());
+        System.out.println("Mensalidade Final: R$ " + res.lerMensalidade());
     }
 }
