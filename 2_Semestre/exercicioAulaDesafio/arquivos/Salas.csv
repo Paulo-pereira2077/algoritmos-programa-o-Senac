@@ -1,0 +1,7 @@
+//id_sala,numero_sala,capacidade,horario_prova,provas_permitidas
+1, A101, 20, 19:00, Algoritmos I|Algoritmos II
+2, A102, 15, 19:00, Algoritmos I|Algoritmos II
+3, A103, 10, 19:00, Inglês
+4, A101, 20, 21:00, Algoritmos I
+5, A102, 15, 21:00, Algoritmos II
+6, A103, 10, 21:00, Inglês
